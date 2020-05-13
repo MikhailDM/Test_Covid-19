@@ -27,7 +27,7 @@ class MainViewController: UIViewController {
         //Назначаем себя делегатом менеджера получения всей информации
         totalInfManager.delegate = self
         
-        //Получаем все данные
+        //Получаем все данные статистики по всему миру
         totalInfManager.fetchAllInf()
     }
     
@@ -50,19 +50,20 @@ class MainViewController: UIViewController {
 extension MainViewController: TotalInfManagerDelegate {
     //Обновление информации при загрузке данных
     func didUpdateInformation(_ totalInfManager: TotalInfManager, information: TotalInfModel) {
-        //Выполняем в асинхронном режиме чтобы не ждать завершения загрузку перед показом view
+        //Выполняем в асинхронном режиме чтобы не ждать завершения загрузкиы перед показом view
         DispatchQueue.main.async {
             self.confirmedLabel.text = String(information.confirmedNum)
             self.deathLabel.text = String(information.deathsNum)
             self.recoveredLabel.text = String(information.recoveredNum)
         }
     }
-    
     //Ошибка сети
     func didFailWithError(error: Error) {
         print(error)
     }
 }
+
+
 
 
 // MARK: - UITableViewDataSource
