@@ -16,6 +16,7 @@
 		27A3403A246C5CEE00A734BF /* TotalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A34039246C5CEE00A734BF /* TotalData.swift */; };
 		27A34040246C5EE800A734BF /* TotalInfManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A3403F246C5EE800A734BF /* TotalInfManager.swift */; };
 		27A34045246C624B00A734BF /* TotalInfModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A34044246C624B00A734BF /* TotalInfModel.swift */; };
+		27A34047246C78C100A734BF /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A34046246C78C100A734BF /* MainTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		27A34039246C5CEE00A734BF /* TotalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalData.swift; sourceTree = "<group>"; };
 		27A3403F246C5EE800A734BF /* TotalInfManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalInfManager.swift; sourceTree = "<group>"; };
 		27A34044246C624B00A734BF /* TotalInfModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalInfModel.swift; sourceTree = "<group>"; };
+		27A34046246C78C100A734BF /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 		27A34037246C5CC500A734BF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				27A34046246C78C100A734BF /* MainTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 				27A3403A246C5CEE00A734BF /* TotalData.swift in Sources */,
 				27A34035246C5B3F00A734BF /* MainViewController.swift in Sources */,
 				27A34016246C588700A734BF /* AppDelegate.swift in Sources */,
+				27A34047246C78C100A734BF /* MainTableViewCell.swift in Sources */,
 				27A34045246C624B00A734BF /* TotalInfModel.swift in Sources */,
 				27A34018246C588700A734BF /* SceneDelegate.swift in Sources */,
 				27A34040246C5EE800A734BF /* TotalInfManager.swift in Sources */,

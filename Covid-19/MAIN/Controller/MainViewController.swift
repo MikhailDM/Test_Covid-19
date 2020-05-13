@@ -9,10 +9,12 @@
 import UIKit
 
 class MainViewController: UIViewController {
-//MARK: - LABELS
+//MARK: - LINKS
     @IBOutlet weak var confirmedLabel: UILabel!
     @IBOutlet weak var deathLabel: UILabel!
     @IBOutlet weak var recoveredLabel: UILabel!
+    
+    @IBOutlet weak var tableView: UITableView!
     
     
 //MARK: - OBJECTS
@@ -60,6 +62,39 @@ extension MainViewController: TotalInfManagerDelegate {
     func didFailWithError(error: Error) {
         print(error)
     }
+}
+
+
+// MARK: - UITableViewDataSource
+extension MainViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 15
+    }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "mainCell", for: indexPath) as UITableViewCell
+
+        cell.textLabel!.text = "TEST"
+        cell.textLabel?.textColor = UIColor.white
+        return cell
+    }
     
+    /*func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        guard let meal = user.meals?[indexPath.row] as? Meal, editingStyle == .delete else { return }
+        
+        context.delete(meal)
+        
+        do {
+            try context.save()
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        } catch let error as NSError {
+            print(error.localizedDescription)
+        }
+    }*/
+    /*
+     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+         return "My happy meal time"
+     }
+     
+     */
 }
