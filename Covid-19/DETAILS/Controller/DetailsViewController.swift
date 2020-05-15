@@ -9,17 +9,28 @@
 import UIKit
 
 class DetailsViewController: UIViewController {
+//MARK: - LINKS    
+    @IBOutlet weak var countryNameLabel: UILabel!
+    @IBOutlet weak var confirmedLabel: UILabel!
+    @IBOutlet weak var deathLabel: UILabel!
+    @IBOutlet weak var recoveredLabel: UILabel!
     
+    
+  
+//MARK: - VARIABLES
     var country = Country(fullName: "", iso2: "")
-
+    
+    
+//MARK: - LOADING
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(country)
+        countryNameLabel.text = country.fullName
     }
     
     
     
-    
+//MARK: - FUNCTIONS
+   
     
     
 }

@@ -21,8 +21,7 @@ class MainViewController: UIViewController {
     var totalInfManager = TotalInfManager()
     
     
-//MARK: - VARIABLES
-    //let countries = ["AU", "RU", "US"]
+//MARK: - VARIABLES    
     var countries = Country.all()
     
     

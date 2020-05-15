@@ -19,6 +19,9 @@
 		27A34047246C78C100A734BF /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A34046246C78C100A734BF /* MainTableViewCell.swift */; };
 		27B445B5246EBDAD00F6359F /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B445B4246EBDAC00F6359F /* CountryModel.swift */; };
 		27B445BB246EC93600F6359F /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B445BA246EC93600F6359F /* DetailsViewController.swift */; };
+		27B445BD246ED79500F6359F /* CurentCModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B445BC246ED79500F6359F /* CurentCModel.swift */; };
+		27B445BF246ED7C800F6359F /* CurrentCData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B445BE246ED7C800F6359F /* CurrentCData.swift */; };
+		27B445C2246EDA6900F6359F /* DetailsNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B445C1246EDA6900F6359F /* DetailsNetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		27A34046246C78C100A734BF /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		27B445B4246EBDAC00F6359F /* CountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
 		27B445BA246EC93600F6359F /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		27B445BC246ED79500F6359F /* CurentCModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurentCModel.swift; sourceTree = "<group>"; };
+		27B445BE246ED7C800F6359F /* CurrentCData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentCData.swift; sourceTree = "<group>"; };
+		27B445C1246EDA6900F6359F /* DetailsNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsNetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +85,6 @@
 		27A3402D246C5A7700A734BF /* GLOBAL MVC */ = {
 			isa = PBXGroup;
 			children = (
-				27A3403B246C5E6A00A734BF /* Network */,
 				27A34030246C5AB600A734BF /* Model */,
 				27A3402F246C5AB100A734BF /* View */,
 				27A3402E246C5AA900A734BF /* Controller */,
@@ -108,6 +113,7 @@
 		27A34030246C5AB600A734BF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				27B445B4246EBDAC00F6359F /* CountryModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -124,7 +130,6 @@
 		27A34033246C5B2500A734BF /* MAIN */ = {
 			isa = PBXGroup;
 			children = (
-				27A34043246C5F8000A734BF /* Response */,
 				27A3403E246C5ECD00A734BF /* Main Network */,
 				27A34038246C5CC900A734BF /* Model */,
 				27A34037246C5CC500A734BF /* View */,
@@ -154,16 +159,8 @@
 			children = (
 				27A34039246C5CEE00A734BF /* TotalData.swift */,
 				27A34044246C624B00A734BF /* TotalInfModel.swift */,
-				27B445B4246EBDAC00F6359F /* CountryModel.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		27A3403B246C5E6A00A734BF /* Network */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Network;
 			sourceTree = "<group>";
 		};
 		27A3403E246C5ECD00A734BF /* Main Network */ = {
@@ -174,16 +171,10 @@
 			path = "Main Network";
 			sourceTree = "<group>";
 		};
-		27A34043246C5F8000A734BF /* Response */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Response;
-			sourceTree = "<group>";
-		};
 		27B445B6246EC8FE00F6359F /* DETAILS */ = {
 			isa = PBXGroup;
 			children = (
+				27B445C0246EDA4300F6359F /* Details Network */,
 				27B445B9246EC91E00F6359F /* Model */,
 				27B445B8246EC91B00F6359F /* View */,
 				27B445B7246EC91100F6359F /* Controller */,
@@ -209,8 +200,18 @@
 		27B445B9246EC91E00F6359F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				27B445BC246ED79500F6359F /* CurentCModel.swift */,
+				27B445BE246ED7C800F6359F /* CurrentCData.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		27B445C0246EDA4300F6359F /* Details Network */ = {
+			isa = PBXGroup;
+			children = (
+				27B445C1246EDA6900F6359F /* DetailsNetworkManager.swift */,
+			);
+			path = "Details Network";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,9 +289,12 @@
 				27A34035246C5B3F00A734BF /* MainViewController.swift in Sources */,
 				27B445BB246EC93600F6359F /* DetailsViewController.swift in Sources */,
 				27B445B5246EBDAD00F6359F /* CountryModel.swift in Sources */,
+				27B445BD246ED79500F6359F /* CurentCModel.swift in Sources */,
+				27B445BF246ED7C800F6359F /* CurrentCData.swift in Sources */,
 				27A34016246C588700A734BF /* AppDelegate.swift in Sources */,
 				27A34047246C78C100A734BF /* MainTableViewCell.swift in Sources */,
 				27A34045246C624B00A734BF /* TotalInfModel.swift in Sources */,
+				27B445C2246EDA6900F6359F /* DetailsNetworkManager.swift in Sources */,
 				27A34018246C588700A734BF /* SceneDelegate.swift in Sources */,
 				27A34040246C5EE800A734BF /* TotalInfManager.swift in Sources */,
 			);

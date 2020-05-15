@@ -20,7 +20,7 @@ struct Country {
                 .map(String.init)
                 .joined()
     }
-    //Ссылка на данные в зависимости от страны
+    //Ссылка на статистику по дням. Финальное значение - текущее по стране
     var url: String {
         return  ("https://wuhan-coronavirus-api.laeyoung.endpoint.ainize.ai/jhu-edu/timeseries?iso2=\(iso2)&onlyCountries=true")
     }
