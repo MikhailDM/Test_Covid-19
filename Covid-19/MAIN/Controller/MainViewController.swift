@@ -31,25 +31,57 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         //Назначаем себя делегатом менеджера получения всей информации
         totalInfManager.delegate = self
-        
+        //Прячем бар навигации
+        navigationController?.navigationBar.isHidden = true
         //Получаем все данные статистики по всему миру
         totalInfManager.fetchAllInf()
     }
  
     
 //MARK: - ACTIONS
+    //Сортировка по убыванию
     @IBAction func sortingButtonZPressed(_ sender: UIButton) {
         countries = countries.sorted{ $0.fullName > $1.fullName }
         tableView.reloadData()
     }
-    
+    //Сортировка по возрастанию
     @IBAction func sortingButtonAPressed(_ sender: UIButton) {
         countries = countries.sorted{ $0.fullName < $1.fullName }
         tableView.reloadData()
     }
     
-
     
+//MARK: - NAVIGATION
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        guard segue.identifier == "detailsSegue" else { return }
+        //Индекс нажатой ячейки
+        let indexPath = tableView.indexPathForSelectedRow!
+        //Обьект нажатой ячейки
+        let country = countries[indexPath.row]
+        //Добираемся до контроллера назначения
+        if let detailsVC = segue.destination as? DetailsViewController {
+            //Передаем обьект
+            detailsVC.country = country
+        }
+        
+        
+        /*
+         if segue.identifier == "MySegueId" {
+             if let nextViewController = segue.destination as? NextViewController {
+                     nextViewController.valueOfxyz = "XYZ" //Or pass any values
+                     nextViewController.valueOf123 = 123
+             }
+         }
+         
+         let navigationVC = segue.destination as! UINavigationController
+         //Верхний контроллер
+         let detailsVC = navigationVC.topViewController as! DetailsViewController
+         //Передаем обьект
+         detailsVC.country = country
+         //detailsVC.title = "Edit"
+         */
+    }
     
     
     /*
@@ -87,7 +119,7 @@ extension MainViewController: TotalInfManagerDelegate {
 
 
 
-// MARK: - UITableViewDataSource
+// MARK: - UITABLEVIEWDATASOURSE
 extension MainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return countries.count

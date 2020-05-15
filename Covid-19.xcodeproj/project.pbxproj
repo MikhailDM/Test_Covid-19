@@ -18,6 +18,7 @@
 		27A34045246C624B00A734BF /* TotalInfModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A34044246C624B00A734BF /* TotalInfModel.swift */; };
 		27A34047246C78C100A734BF /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A34046246C78C100A734BF /* MainTableViewCell.swift */; };
 		27B445B5246EBDAD00F6359F /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B445B4246EBDAC00F6359F /* CountryModel.swift */; };
+		27B445BB246EC93600F6359F /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B445BA246EC93600F6359F /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		27A34044246C624B00A734BF /* TotalInfModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalInfModel.swift; sourceTree = "<group>"; };
 		27A34046246C78C100A734BF /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		27B445B4246EBDAC00F6359F /* CountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
+		27B445BA246EC93600F6359F /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 			children = (
 				27A3402D246C5A7700A734BF /* GLOBAL MVC */,
 				27A34033246C5B2500A734BF /* MAIN */,
+				27B445B6246EC8FE00F6359F /* DETAILS */,
 				27A34031246C5AD900A734BF /* SUPPORT */,
 			);
 			path = "Covid-19";
@@ -178,6 +181,38 @@
 			path = Response;
 			sourceTree = "<group>";
 		};
+		27B445B6246EC8FE00F6359F /* DETAILS */ = {
+			isa = PBXGroup;
+			children = (
+				27B445B9246EC91E00F6359F /* Model */,
+				27B445B8246EC91B00F6359F /* View */,
+				27B445B7246EC91100F6359F /* Controller */,
+			);
+			path = DETAILS;
+			sourceTree = "<group>";
+		};
+		27B445B7246EC91100F6359F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				27B445BA246EC93600F6359F /* DetailsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		27B445B8246EC91B00F6359F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		27B445B9246EC91E00F6359F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -251,6 +286,7 @@
 			files = (
 				27A3403A246C5CEE00A734BF /* TotalData.swift in Sources */,
 				27A34035246C5B3F00A734BF /* MainViewController.swift in Sources */,
+				27B445BB246EC93600F6359F /* DetailsViewController.swift in Sources */,
 				27B445B5246EBDAD00F6359F /* CountryModel.swift in Sources */,
 				27A34016246C588700A734BF /* AppDelegate.swift in Sources */,
 				27A34047246C78C100A734BF /* MainTableViewCell.swift in Sources */,

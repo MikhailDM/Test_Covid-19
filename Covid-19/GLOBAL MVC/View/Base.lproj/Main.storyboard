@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="G0T-WU-Nmh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IYz-ts-4fp">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="KCf-og-l4j" userLabel="All Screen Stack">
-                                <rect key="frame" x="10" y="54" width="394" height="798"/>
+                                <rect key="frame" x="10" y="98" width="394" height="754"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="VSE-rt-t7z" userLabel="Name Stack">
                                         <rect key="frame" x="0.0" y="0.0" width="394" height="70.5"/>
@@ -42,25 +42,25 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="sQh-n2-OoJ" userLabel="Information Stack ">
-                                        <rect key="frame" x="0.0" y="106.5" width="394" height="199.5"/>
+                                        <rect key="frame" x="0.0" y="106.5" width="394" height="188.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zgn-cs-c53">
-                                                <rect key="frame" x="0.0" y="0.0" width="394" height="63"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="394" height="59.5"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="suit.diamond" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="BEW-xX-RLG">
-                                                        <rect key="frame" x="0.0" y="0.5" width="63" height="62"/>
+                                                        <rect key="frame" x="0.0" y="0.5" width="59.5" height="58.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="BEW-xX-RLG" secondAttribute="height" multiplier="1:1" id="fcU-40-8tu"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirmed:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="xQu-Me-e3E">
-                                                        <rect key="frame" x="73" y="0.0" width="119" height="63"/>
+                                                        <rect key="frame" x="69.5" y="0.0" width="119" height="59.5"/>
                                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Loading..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="a24-zr-Vo6">
-                                                        <rect key="frame" x="202" y="0.0" width="192" height="63"/>
+                                                        <rect key="frame" x="198.5" y="0.0" width="195.5" height="59.5"/>
                                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -68,22 +68,22 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QiC-8w-650">
-                                                <rect key="frame" x="0.0" y="68" width="394" height="63.5"/>
+                                                <rect key="frame" x="0.0" y="64.5" width="394" height="59.5"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="4I4-tv-vSF">
-                                                        <rect key="frame" x="0.0" y="1.5" width="63" height="61"/>
+                                                        <rect key="frame" x="0.0" y="1.5" width="59.5" height="57"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="4I4-tv-vSF" secondAttribute="height" multiplier="1:1" id="dbn-DD-FOq"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deaths:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="a3e-ss-S6q">
-                                                        <rect key="frame" x="73" y="0.0" width="119" height="63.5"/>
+                                                        <rect key="frame" x="69.5" y="0.0" width="119" height="59.5"/>
                                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Loading..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="Szc-fb-9sk">
-                                                        <rect key="frame" x="202" y="0.0" width="192" height="63.5"/>
+                                                        <rect key="frame" x="198.5" y="0.0" width="195.5" height="59.5"/>
                                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -94,22 +94,22 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="enJ-Rb-hBK">
-                                                <rect key="frame" x="0.0" y="136.5" width="394" height="63"/>
+                                                <rect key="frame" x="0.0" y="129" width="394" height="59.5"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="waveform.path.ecg" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="0Ea-Vb-kmd">
-                                                        <rect key="frame" x="0.0" y="0.5" width="63" height="62.5"/>
+                                                        <rect key="frame" x="0.0" y="0.5" width="59.5" height="59"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="0Ea-Vb-kmd" secondAttribute="height" multiplier="1:1" id="BkY-Qu-aXx"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recovered:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="Ekt-z0-msr">
-                                                        <rect key="frame" x="73" y="0.0" width="119" height="63"/>
+                                                        <rect key="frame" x="69.5" y="0.0" width="119" height="59.5"/>
                                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Loading..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="Pwt-qf-hRp">
-                                                        <rect key="frame" x="202" y="0.0" width="192" height="63"/>
+                                                        <rect key="frame" x="198.5" y="0.0" width="195.5" height="59.5"/>
                                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -127,7 +127,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="8AL-7J-GFV">
-                                        <rect key="frame" x="0.0" y="311" width="394" height="38"/>
+                                        <rect key="frame" x="0.0" y="300" width="394" height="38"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Country:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="pU2-QK-RZT" userLabel="Select Country">
                                                 <rect key="frame" x="0.0" y="0.0" width="221.5" height="38"/>
@@ -154,7 +154,7 @@
                                         </subviews>
                                     </stackView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EZi-rd-qwH">
-                                        <rect key="frame" x="0.0" y="354" width="394" height="444"/>
+                                        <rect key="frame" x="0.0" y="343" width="394" height="411"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                         <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -195,6 +195,7 @@
                                                 <connections>
                                                     <outlet property="countryLabel" destination="tHu-2p-NZo" id="XMJ-9H-rX8"/>
                                                     <outlet property="flagLabel" destination="qK6-oH-kI4" id="nRL-vR-eLF"/>
+                                                    <segue destination="9Fa-Md-a31" kind="presentation" identifier="detailsSegue" id="G0d-IA-tBV"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
@@ -218,6 +219,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UcX-B1-YbP"/>
                     </view>
+                    <navigationItem key="navigationItem" id="ZYp-mF-bWU"/>
                     <connections>
                         <outlet property="confirmedLabel" destination="a24-zr-Vo6" id="HLH-aX-HDc"/>
                         <outlet property="deathLabel" destination="Szc-fb-9sk" id="6u5-kz-uew"/>
@@ -226,6 +228,39 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nvz-Jw-yHB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1010.144927536232" y="8.7053571428571423"/>
+        </scene>
+        <!--Details View Controller-->
+        <scene sceneID="kPx-tx-i8B">
+            <objects>
+                <viewController id="9Fa-Md-a31" customClass="DetailsViewController" customModule="Covid_19" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IEj-Wk-8vD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="UzS-2U-Py0"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cJM-Iz-GMf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1863.7681159420292" y="8.7053571428571423"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ZiJ-qF-eGW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IYz-ts-4fp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="I0E-5N-bqM">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="G0T-WU-Nmh" kind="relationship" relationship="rootViewController" id="9be-Ym-Mun"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jzZ-5E-GjJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="100.00000000000001" y="8.7053571428571423"/>
         </scene>
