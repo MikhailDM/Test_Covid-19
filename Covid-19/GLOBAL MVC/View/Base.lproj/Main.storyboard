@@ -171,6 +171,10 @@
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <connections>
+                                                    <outlet property="countryLabel" destination="tHu-2p-NZo" id="XMJ-9H-rX8"/>
+                                                    <outlet property="flagLabel" destination="qK6-oH-kI4" id="nRL-vR-eLF"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
                                         <connections>

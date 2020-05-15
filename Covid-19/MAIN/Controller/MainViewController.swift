@@ -78,10 +78,12 @@ extension MainViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "mainCell", for: indexPath) as UITableViewCell
-
-        cell.textLabel!.text = countries[indexPath.row].fullName
-        cell.textLabel?.textColor = UIColor.white
+        let cell = tableView.dequeueReusableCell(withIdentifier: "mainCell", for: indexPath) as! MainTableViewCell
+        
+        cell.flagLabel.text = countries[indexPath.row].flag
+        cell.countryLabel.text = countries[indexPath.row].fullName
+        //cell.textLabel!.text = countries[indexPath.row].fullName
+        //cell.textLabel?.textColor = UIColor.white
         return cell
     }
     

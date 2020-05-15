@@ -11,6 +11,7 @@ import Foundation
 struct Country {
     var fullName: String
     var iso2: String
+    //Флаг страны в зависимости от ISO2
     var flag: String {
         return  iso2
                 .unicodeScalars
@@ -19,14 +20,19 @@ struct Country {
                 .map(String.init)
                 .joined()
     }
+    //Ссылка на данные в зависимости от страны
+    var url: String {
+        return  ("https://wuhan-coronavirus-api.laeyoung.endpoint.ainize.ai/jhu-edu/timeseries?iso2=\(iso2)&onlyCountries=true")
+    }
 }
 
 //Расширение возвращающее массив моделей стран
 extension Country {
     static func all() -> [Country] {
         return [
-            Country(fullName: "Австралия", iso2: "AU"),
-            Country(fullName: "Австрия", iso2: "AT"),            
+            Country(fullName: "Afghanistan", iso2: "AF"),
+            Country(fullName: "Albania", iso2: "AL"),
+            Country(fullName: "Russia", iso2: "RU"),
         ]
     }
 }

@@ -9,7 +9,12 @@
 import UIKit
 
 class MainTableViewCell: UITableViewCell {
+//MARK: - LINKS
+    @IBOutlet weak var flagLabel: UILabel!
+    @IBOutlet weak var countryLabel: UILabel!
 
+
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
