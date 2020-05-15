@@ -23,7 +23,7 @@ class MainViewController: UIViewController {
     
 //MARK: - VARIABLES
     //let countries = ["AU", "RU", "US"]
-    let countries = Country.all()
+    var countries = Country.all()
     
     
 //MARK: - LOADING
@@ -35,8 +35,23 @@ class MainViewController: UIViewController {
         //Получаем все данные статистики по всему миру
         totalInfManager.fetchAllInf()
     }
+ 
+    
+//MARK: - ACTIONS
+    @IBAction func sortingButtonZPressed(_ sender: UIButton) {
+        countries = countries.sorted{ $0.fullName > $1.fullName }
+        tableView.reloadData()
+    }
+    
+    @IBAction func sortingButtonAPressed(_ sender: UIButton) {
+        countries = countries.sorted{ $0.fullName < $1.fullName }
+        tableView.reloadData()
+    }
     
 
+    
+    
+    
     /*
     // MARK: - Navigation
 
@@ -48,6 +63,7 @@ class MainViewController: UIViewController {
     */
 
 }
+
 
 
 
