@@ -138,12 +138,37 @@
                                         <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="mainCell" id="sRc-4d-91g" customClass="MainTableViewCell" customModule="Covid_19" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="404" height="43.5"/>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="mainCell" rowHeight="50" id="sRc-4d-91g" customClass="MainTableViewCell" customModule="Covid_19" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="404" height="50"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sRc-4d-91g" id="eFz-Sb-g4N">
-                                                    <rect key="frame" x="0.0" y="0.0" width="404" height="43.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="404" height="50"/>
                                                     <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Flag" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qK6-oH-kI4">
+                                                            <rect key="frame" x="20" y="11" width="39.5" height="28"/>
+                                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Russia" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tHu-2p-NZo">
+                                                            <rect key="frame" x="79.5" y="11" width="304.5" height="28"/>
+                                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="qK6-oH-kI4" firstAttribute="top" secondItem="eFz-Sb-g4N" secondAttribute="topMargin" id="19E-By-arP"/>
+                                                        <constraint firstAttribute="bottomMargin" secondItem="tHu-2p-NZo" secondAttribute="bottom" id="9H6-t6-a15"/>
+                                                        <constraint firstItem="tHu-2p-NZo" firstAttribute="centerY" secondItem="eFz-Sb-g4N" secondAttribute="centerYWithinMargins" id="BYx-kp-2n0"/>
+                                                        <constraint firstItem="qK6-oH-kI4" firstAttribute="centerY" secondItem="eFz-Sb-g4N" secondAttribute="centerY" id="Em0-fI-L4z"/>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="tHu-2p-NZo" secondAttribute="trailing" id="OYn-lC-egP"/>
+                                                        <constraint firstAttribute="bottomMargin" secondItem="qK6-oH-kI4" secondAttribute="bottom" id="Prw-V6-4c8"/>
+                                                        <constraint firstItem="tHu-2p-NZo" firstAttribute="leading" secondItem="qK6-oH-kI4" secondAttribute="trailing" constant="20" id="VRm-bN-ClN"/>
+                                                        <constraint firstItem="qK6-oH-kI4" firstAttribute="leading" secondItem="eFz-Sb-g4N" secondAttribute="leadingMargin" id="XOh-aH-QZh"/>
+                                                        <constraint firstItem="tHu-2p-NZo" firstAttribute="top" secondItem="eFz-Sb-g4N" secondAttribute="topMargin" id="jBC-Ia-tWT"/>
+                                                    </constraints>
                                                 </tableViewCellContentView>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                             </tableViewCell>

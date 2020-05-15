@@ -21,6 +21,11 @@ class MainViewController: UIViewController {
     var totalInfManager = TotalInfManager()
     
     
+//MARK: - VARIABLES
+    //let countries = ["AU", "RU", "US"]
+    let countries = Country.all()
+    
+    
 //MARK: - LOADING
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,13 +74,13 @@ extension MainViewController: TotalInfManagerDelegate {
 // MARK: - UITableViewDataSource
 extension MainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 15
+        return countries.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "mainCell", for: indexPath) as UITableViewCell
 
-        cell.textLabel!.text = "TEST"
+        cell.textLabel!.text = countries[indexPath.row].fullName
         cell.textLabel?.textColor = UIColor.white
         return cell
     }

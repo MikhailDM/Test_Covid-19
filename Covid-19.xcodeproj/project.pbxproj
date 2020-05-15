@@ -17,6 +17,7 @@
 		27A34040246C5EE800A734BF /* TotalInfManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A3403F246C5EE800A734BF /* TotalInfManager.swift */; };
 		27A34045246C624B00A734BF /* TotalInfModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A34044246C624B00A734BF /* TotalInfModel.swift */; };
 		27A34047246C78C100A734BF /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A34046246C78C100A734BF /* MainTableViewCell.swift */; };
+		27B445B5246EBDAD00F6359F /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B445B4246EBDAC00F6359F /* CountryModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		27A3403F246C5EE800A734BF /* TotalInfManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalInfManager.swift; sourceTree = "<group>"; };
 		27A34044246C624B00A734BF /* TotalInfModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalInfModel.swift; sourceTree = "<group>"; };
 		27A34046246C78C100A734BF /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		27B445B4246EBDAC00F6359F /* CountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 			children = (
 				27A34039246C5CEE00A734BF /* TotalData.swift */,
 				27A34044246C624B00A734BF /* TotalInfModel.swift */,
+				27B445B4246EBDAC00F6359F /* CountryModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 			files = (
 				27A3403A246C5CEE00A734BF /* TotalData.swift in Sources */,
 				27A34035246C5B3F00A734BF /* MainViewController.swift in Sources */,
+				27B445B5246EBDAD00F6359F /* CountryModel.swift in Sources */,
 				27A34016246C588700A734BF /* AppDelegate.swift in Sources */,
 				27A34047246C78C100A734BF /* MainTableViewCell.swift in Sources */,
 				27A34045246C624B00A734BF /* TotalInfModel.swift in Sources */,
