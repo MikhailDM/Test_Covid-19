@@ -17,9 +17,8 @@ class MainViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     
-    
 //MARK: - OBJECTS
-    var totalInfManager = TotalInfNetworkManager()
+    var totalInfManager = TotalInfNetworkManager.shared
     
     
 //MARK: - VARIABLES    
@@ -67,36 +66,7 @@ class MainViewController: UIViewController {
             //Передаем обьект
             detailsVC.country = country
         }
-        
-        
-        /*
-         if segue.identifier == "MySegueId" {
-             if let nextViewController = segue.destination as? NextViewController {
-                     nextViewController.valueOfxyz = "XYZ" //Or pass any values
-                     nextViewController.valueOf123 = 123
-             }
-         }
-         
-         let navigationVC = segue.destination as! UINavigationController
-         //Верхний контроллер
-         let detailsVC = navigationVC.topViewController as! DetailsViewController
-         //Передаем обьект
-         detailsVC.country = country
-         //detailsVC.title = "Edit"
-         */
     }
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 
@@ -130,29 +100,10 @@ extension MainViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "mainCell", for: indexPath) as! MainTableViewCell
-        
+        //Настраиваем ячейку
         cell.flagLabel.text = countries[indexPath.row].flag
         cell.countryLabel.text = countries[indexPath.row].fullName
         cell.tintColor = .blue
         return cell
     }
-    
-    /*func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        guard let meal = user.meals?[indexPath.row] as? Meal, editingStyle == .delete else { return }
-        
-        context.delete(meal)
-        
-        do {
-            try context.save()
-            tableView.deleteRows(at: [indexPath], with: .automatic)
-        } catch let error as NSError {
-            print(error.localizedDescription)
-        }
-    }*/
-    /*
-     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-         return "My happy meal time"
-     }
-     
-     */
 }

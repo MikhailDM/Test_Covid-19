@@ -16,7 +16,6 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var deathsProgressView: UIProgressView!
     @IBOutlet weak var totalProgressView: UIProgressView!
     
-    
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var recoveredLabel: UILabel!
     @IBOutlet weak var deathsLabel: UILabel!
@@ -39,8 +38,6 @@ class DetailsViewController: UIViewController {
 //MARK: - LOADING
     override func viewDidLoad() {
         super.viewDidLoad()
-        //Назначаем имя страны
-        //countryNameLabel.text = country.fullName
         //Назначаем себя делегатом менеджера получения всей информации
         currentInfManager.delegate = self
         //Test
@@ -50,11 +47,8 @@ class DetailsViewController: UIViewController {
         //Заголовок бара
         title = country.fullName
     }
-    
-    
-//MARK: - FUNCTIONS
-    
 }
+
 
 
 
@@ -73,13 +67,10 @@ extension DetailsViewController: DetailsNetworkManagerDelegate {
             
             //Число выздоровивших
             self.totalRecovered = self.timeTable[0].recoveredNum
-            print(self.totalRecovered)
             //Число умерших
             self.totalDeaths = self.timeTable[0].deathsNum
-            print(self.totalDeaths)
             //Общее число
             self.totalConfirmed = self.timeTable[0].confirmedNum
-            print(self.totalConfirmed)
             
             //Настройка графиков
             self.setUpSchedule()
@@ -89,7 +80,6 @@ extension DetailsViewController: DetailsNetworkManagerDelegate {
     func didFailWithError(error: Error) {
         print(error)
     }
-    
     //Метод форматирования списка моделей
     private func dateSorting() {
         let df = DateFormatter()
@@ -122,7 +112,7 @@ extension DetailsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "detailsCell", for: indexPath) as! DetailsTableViewCell
-        
+        //Настраиваем ячейку
         cell.dayLabel.text = timeTable[indexPath.row].date
         cell.confirmedLabel.text = String(timeTable[indexPath.row].confirmedNum)
         cell.deathsLabel.text = String(timeTable[indexPath.row].deathsNum)

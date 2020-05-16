@@ -7,6 +7,7 @@
 //
 
 import Foundation
+
 //Модель страны
 struct Country {
     var fullName: String
@@ -29,10 +30,7 @@ struct Country {
 //Расширение возвращающее массив моделей стран
 extension Country {
     static func all() -> [Country] {
-        return [
-            //Country(fullName: "Afghanistan", iso2: "AF"),
-            //Country(fullName: "Albania", iso2: "AL"),
-            //Country(fullName: "Russia", iso2: "RU"),
+        return [            
             Country(fullName: "Afghanistan", iso2: "AF"),
             Country(fullName: "Albania", iso2: "AL"),
             Country(fullName: "Algeria", iso2: "DZ"),

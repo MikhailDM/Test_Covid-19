@@ -17,6 +17,11 @@ protocol TotalInfManagerDelegate {
 
 //Получаем данные для основной статистики
 class TotalInfNetworkManager {
+//MARK: - INIT
+    static var shared = TotalInfNetworkManager()
+    private init(){}
+    
+    
 //MARK: - VARIABLES
     //URL
     private let totalInformationURL = "https://wuhan-coronavirus-api.laeyoung.endpoint.ainize.ai/jhu-edu/brief"
@@ -29,7 +34,6 @@ class TotalInfNetworkManager {
     func fetchAllInf() {
         performRequest(with: totalInformationURL)
     }
-    
     //Интернет сессия
     private func performRequest(with urlString: String) {
         if let url = URL(string: urlString) {
