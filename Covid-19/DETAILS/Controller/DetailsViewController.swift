@@ -11,9 +11,7 @@ import UIKit
 class DetailsViewController: UIViewController {
 //MARK: - LINKS    
     @IBOutlet weak var countryNameLabel: UILabel!
-    @IBOutlet weak var confirmedLabel: UILabel!
-    @IBOutlet weak var deathLabel: UILabel!
-    @IBOutlet weak var recoveredLabel: UILabel!
+    @IBOutlet weak var tableView: UITableView!
     
 
 //MARK: - OBJECTS
@@ -22,6 +20,7 @@ class DetailsViewController: UIViewController {
   
 //MARK: - VARIABLES
     var country = Country(fullName: "", iso2: "")
+    var timeTable = [CurrentCModel]()
     
     
 //MARK: - LOADING
@@ -49,20 +48,33 @@ class DetailsViewController: UIViewController {
 extension DetailsViewController: DetailsNetworkManagerDelegate {
     //Обновление информации при загрузке данных
     func didUpdateInformation(_ detailsInfManager: DetailsNetworkManager, information: [CurrentCModel]) {
-        print(information.last?.date)
-        print(information.last?.confirmedNum)        
-        print(information.last?.deathsNum)
-        print(information.last?.recoveredNum)
-        
         //Выполняем в асинхронном режиме чтобы не ждать завершения загрузки перед показом view
-        /*DispatchQueue.main.async {
-            self.confirmedLabel.text = String(information.confirmedNum)
-            self.deathLabel.text = String(information.deathsNum)
-            self.recoveredLabel.text = String(information.recoveredNum)
-        }*/
+        DispatchQueue.main.async {
+            self.timeTable = information
+            self.tableView.reloadData()
+        }
     }
     //Ошибка сети
     func didFailWithError(error: Error) {
         print(error)
+    }
+}
+
+
+
+// MARK: - UITABLEVIEWDATASOURSE
+extension DetailsViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return timeTable.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "detailsCell", for: indexPath) as! DetailsTableViewCell
+        
+        cell.dayLabel.text = timeTable[indexPath.row].date
+        cell.confirmedLabel.text = String(timeTable[indexPath.row].confirmedNum)
+        cell.deathsLabel.text = String(timeTable[indexPath.row].deathsNum)
+        cell.recoveredLabel.text = String(timeTable[indexPath.row].recoveredNum)
+        return cell
     }
 }

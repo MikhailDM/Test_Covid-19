@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		275626A5246FCEE800D1C577 /* DetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275626A4246FCEE800D1C577 /* DetailsTableViewCell.swift */; };
 		27A34016246C588700A734BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A34015246C588700A734BF /* AppDelegate.swift */; };
 		27A34018246C588700A734BF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A34017246C588700A734BF /* SceneDelegate.swift */; };
 		27A3401D246C588700A734BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27A3401B246C588700A734BF /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		275626A4246FCEE800D1C577 /* DetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsTableViewCell.swift; sourceTree = "<group>"; };
 		27A34012246C588700A734BF /* Covid-19.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Covid-19.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27A34015246C588700A734BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27A34017246C588700A734BF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 		27B445B8246EC91B00F6359F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				275626A4246FCEE800D1C577 /* DetailsTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 			files = (
 				27A3403A246C5CEE00A734BF /* TotalData.swift in Sources */,
 				27A34035246C5B3F00A734BF /* MainViewController.swift in Sources */,
+				275626A5246FCEE800D1C577 /* DetailsTableViewCell.swift in Sources */,
 				27B445BB246EC93600F6359F /* DetailsViewController.swift in Sources */,
 				27B445B5246EBDAD00F6359F /* CountryModel.swift in Sources */,
 				27B445BD246ED79500F6359F /* CurrentCModel.swift in Sources */,
