@@ -29,7 +29,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //Назначаем себя делегатом менеджера получения всей информации
-        totalInfManager.delegate = self        
+        totalInfManager.delegate = self
         //Получаем все данные статистики по всему миру
         totalInfManager.fetchAllInf()
     }
@@ -132,8 +132,7 @@ extension MainViewController: UITableViewDataSource {
         
         cell.flagLabel.text = countries[indexPath.row].flag
         cell.countryLabel.text = countries[indexPath.row].fullName
-        //cell.textLabel!.text = countries[indexPath.row].fullName
-        //cell.textLabel?.textColor = UIColor.white
+        cell.tintColor = .blue
         return cell
     }
     

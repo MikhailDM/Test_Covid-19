@@ -19,7 +19,7 @@ class DetailsViewController: UIViewController {
   
 //MARK: - VARIABLES
     var country = Country(fullName: "", iso2: "")
-    var timeTable = [CurrentCModel]()
+    var timeTable = [CurrentCModel(date: "Loading...", confirmedNum: 0, deathsNum: 0, recoveredNum: 0)]
     
     
 //MARK: - LOADING
