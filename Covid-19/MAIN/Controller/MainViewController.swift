@@ -29,11 +29,14 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //Назначаем себя делегатом менеджера получения всей информации
-        totalInfManager.delegate = self
-        //Прячем бар навигации
-        navigationController?.navigationBar.isHidden = true
+        totalInfManager.delegate = self        
         //Получаем все данные статистики по всему миру
         totalInfManager.fetchAllInf()
+    }
+    //Прячем бар навигации
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        navigationController?.navigationBar.isHidden = true
     }
  
     

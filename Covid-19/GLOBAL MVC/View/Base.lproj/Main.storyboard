@@ -159,7 +159,7 @@
                                         <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="mainCell" rowHeight="50" id="sRc-4d-91g" customClass="MainTableViewCell" customModule="Covid_19" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="mainCell" rowHeight="50" id="sRc-4d-91g" customClass="MainTableViewCell" customModule="Covid_19" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="394" height="50"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sRc-4d-91g" id="eFz-Sb-g4N">
@@ -195,7 +195,7 @@
                                                 <connections>
                                                     <outlet property="countryLabel" destination="tHu-2p-NZo" id="XMJ-9H-rX8"/>
                                                     <outlet property="flagLabel" destination="qK6-oH-kI4" id="nRL-vR-eLF"/>
-                                                    <segue destination="9Fa-Md-a31" kind="presentation" identifier="detailsSegue" id="G0d-IA-tBV"/>
+                                                    <segue destination="9Fa-Md-a31" kind="show" identifier="detailsSegue" id="G0d-IA-tBV"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
@@ -236,25 +236,19 @@
             <objects>
                 <viewController id="9Fa-Md-a31" customClass="DetailsViewController" customModule="Covid_19" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IEj-Wk-8vD">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="gF6-QD-QoA" userLabel="All Screen Stack ">
-                                <rect key="frame" x="10" y="10" width="394" height="788"/>
+                                <rect key="frame" x="10" y="98" width="394" height="754"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COUNTRY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Vm5-cD-QsF">
-                                        <rect key="frame" x="0.0" y="0.0" width="394" height="52"/>
-                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="40"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oOY-Ig-MHs">
-                                        <rect key="frame" x="0.0" y="57" width="394" height="394"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="377"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                         <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="detailsCell" rowHeight="60" id="Rhr-Fi-UIR" customClass="DetailsTableViewCell" customModule="Covid_19" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="detailsCell" rowHeight="60" id="Rhr-Fi-UIR" customClass="DetailsTableViewCell" customModule="Covid_19" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="394" height="60"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Rhr-Fi-UIR" id="lrz-z0-gOS">
@@ -351,7 +345,7 @@
                                         </connections>
                                     </tableView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="l1j-ig-oEA" userLabel="Schedule">
-                                        <rect key="frame" x="0.0" y="456" width="394" height="332"/>
+                                        <rect key="frame" x="0.0" y="382" width="394" height="372"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schedule:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="jD1-KK-7OF" userLabel="Schedule">
                                                 <rect key="frame" x="0.0" y="0.0" width="394" height="26"/>
@@ -360,7 +354,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bTA-rc-iob">
-                                                <rect key="frame" x="0.0" y="31" width="394" height="301"/>
+                                                <rect key="frame" x="0.0" y="31" width="394" height="341"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                             </view>
                                         </subviews>
@@ -380,8 +374,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UzS-2U-Py0"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Br4-ZF-JM7"/>
                     <connections>
-                        <outlet property="countryNameLabel" destination="Vm5-cD-QsF" id="2E0-Pq-Gry"/>
                         <outlet property="tableView" destination="oOY-Ig-MHs" id="7Vy-JF-oCx"/>
                     </connections>
                 </viewController>
@@ -397,6 +391,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="I0E-5N-bqM">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

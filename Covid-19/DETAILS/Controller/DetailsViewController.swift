@@ -9,9 +9,8 @@
 import UIKit
 
 class DetailsViewController: UIViewController {
-//MARK: - LINKS    
-    @IBOutlet weak var countryNameLabel: UILabel!
-    @IBOutlet weak var tableView: UITableView!
+//MARK: - LINKS
+   @IBOutlet weak var tableView: UITableView!
     
 
 //MARK: - OBJECTS
@@ -27,13 +26,16 @@ class DetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //Назначаем имя страны
-        countryNameLabel.text = country.fullName
+        //countryNameLabel.text = country.fullName
         //Назначаем себя делегатом менеджера получения всей информации
         currentInfManager.delegate = self
         //Test
-        currentInfManager.fetchAllInf(url: country.url)        
+        currentInfManager.fetchAllInf(url: country.url)
+        //Показываем бар навигации
+        navigationController?.navigationBar.isHidden = false
+        //Заголовок бара
+        title = country.fullName
     }
-    
     
     
 //MARK: - FUNCTIONS
