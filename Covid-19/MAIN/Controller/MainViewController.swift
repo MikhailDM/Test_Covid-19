@@ -17,6 +17,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     
+    
 //MARK: - OBJECTS
     var totalInfManager = TotalInfNetworkManager()
     

@@ -244,7 +244,7 @@
                                 <rect key="frame" x="10" y="98" width="394" height="754"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oOY-Ig-MHs">
-                                        <rect key="frame" x="0.0" y="0.0" width="394" height="377"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="301.5"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                         <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -346,23 +346,68 @@
                                         </connections>
                                     </tableView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="l1j-ig-oEA" userLabel="Schedule">
-                                        <rect key="frame" x="0.0" y="382" width="394" height="372"/>
+                                        <rect key="frame" x="0.0" y="306.5" width="394" height="447.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schedule:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="jD1-KK-7OF" userLabel="Schedule">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="Schedule:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="jD1-KK-7OF" userLabel="Schedule">
                                                 <rect key="frame" x="0.0" y="0.0" width="394" height="26"/>
                                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
                                                 <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bTA-rc-iob">
-                                                <rect key="frame" x="0.0" y="31" width="394" height="341"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                            </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="tSW-UG-mma">
+                                                <rect key="frame" x="0.0" y="31" width="394" height="416.5"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Kqg-nZ-che">
+                                                        <rect key="frame" x="0.0" y="0.0" width="394" height="139"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirmed: Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m1A-RX-kRG">
+                                                                <rect key="frame" x="0.0" y="0.0" width="394" height="137"/>
+                                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="C07-24-qag">
+                                                                <rect key="frame" x="0.0" y="137" width="394" height="2"/>
+                                                            </progressView>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Xgc-FE-9UF" userLabel="Recovered">
+                                                        <rect key="frame" x="0.0" y="139" width="394" height="138.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recovered: Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVM-8V-HlM">
+                                                                <rect key="frame" x="0.0" y="0.0" width="394" height="136.5"/>
+                                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="sS3-Q5-OXm">
+                                                                <rect key="frame" x="0.0" y="136.5" width="394" height="2"/>
+                                                                <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </progressView>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="EKe-oK-t3X" userLabel="Deaths">
+                                                        <rect key="frame" x="0.0" y="277.5" width="394" height="139"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deaths: Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ztR-uH-IHE">
+                                                                <rect key="frame" x="0.0" y="0.0" width="394" height="137"/>
+                                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Egi-kL-RdN">
+                                                                <rect key="frame" x="0.0" y="137" width="394" height="2"/>
+                                                                <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </progressView>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="oOY-Ig-MHs" firstAttribute="height" secondItem="gF6-QD-QoA" secondAttribute="height" multiplier="0.5" id="SFa-xR-71B"/>
+                                    <constraint firstItem="oOY-Ig-MHs" firstAttribute="height" secondItem="gF6-QD-QoA" secondAttribute="height" multiplier="0.4" id="SFa-xR-71B"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -377,7 +422,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="Br4-ZF-JM7"/>
                     <connections>
+                        <outlet property="deathsLabel" destination="ztR-uH-IHE" id="McS-w2-szu"/>
+                        <outlet property="deathsProgressView" destination="Egi-kL-RdN" id="4Pl-nR-WxV"/>
+                        <outlet property="recoveredLabel" destination="QVM-8V-HlM" id="nxq-7p-SDy"/>
+                        <outlet property="recoveredProgressView" destination="sS3-Q5-OXm" id="8e9-C7-RLm"/>
                         <outlet property="tableView" destination="oOY-Ig-MHs" id="7Vy-JF-oCx"/>
+                        <outlet property="totalLabel" destination="m1A-RX-kRG" id="0fk-xb-X4b"/>
+                        <outlet property="totalProgressView" destination="C07-24-qag" id="YWQ-BM-UkO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cJM-Iz-GMf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

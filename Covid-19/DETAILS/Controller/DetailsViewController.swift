@@ -10,9 +10,18 @@ import UIKit
 
 class DetailsViewController: UIViewController {
 //MARK: - LINKS
-   @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableView: UITableView!
     
-
+    @IBOutlet weak var recoveredProgressView: UIProgressView!
+    @IBOutlet weak var deathsProgressView: UIProgressView!
+    @IBOutlet weak var totalProgressView: UIProgressView!
+    
+    
+    @IBOutlet weak var totalLabel: UILabel!
+    @IBOutlet weak var recoveredLabel: UILabel!
+    @IBOutlet weak var deathsLabel: UILabel!
+    
+    
 //MARK: - OBJECTS
     var currentInfManager = DetailsNetworkManager.shared
     
@@ -20,6 +29,11 @@ class DetailsViewController: UIViewController {
 //MARK: - VARIABLES
     var country = Country(fullName: "", iso2: "")
     var timeTable = [CurrentCModel(date: "Loading...", confirmedNum: 0, deathsNum: 0, recoveredNum: 0)]
+    
+    //Информация для графиков
+    var totalConfirmed = 0
+    var totalDeaths = 0
+    var totalRecovered = 0
     
     
 //MARK: - LOADING
@@ -39,8 +53,6 @@ class DetailsViewController: UIViewController {
     
     
 //MARK: - FUNCTIONS
-   
-
     
 }
 
@@ -52,10 +64,25 @@ extension DetailsViewController: DetailsNetworkManagerDelegate {
     func didUpdateInformation(_ detailsInfManager: DetailsNetworkManager, information: [CurrentCModel]) {
         //Выполняем в асинхронном режиме чтобы не ждать завершения загрузки перед показом view
         DispatchQueue.main.async {
+            //Массив из обьектов
             self.timeTable = information
+            //Сортировка
             self.dateSorting()
-            //self.timeTable = self.timeTable.sorted { ($1.date ).localizedCaseInsensitiveCompare($0.date ) == .orderedDescending}
+            //Перегрузка списка
             self.tableView.reloadData()
+            
+            //Число выздоровивших
+            self.totalRecovered = self.timeTable[0].recoveredNum
+            print(self.totalRecovered)
+            //Число умерших
+            self.totalDeaths = self.timeTable[0].deathsNum
+            print(self.totalDeaths)
+            //Общее число
+            self.totalConfirmed = self.timeTable[0].confirmedNum
+            print(self.totalConfirmed)
+            
+            //Настройка графиков
+            self.setUpSchedule()
         }
     }
     //Ошибка сети
@@ -68,6 +95,19 @@ extension DetailsViewController: DetailsNetworkManagerDelegate {
         let df = DateFormatter()
         df.dateFormat = "M/d/yy"
         timeTable = timeTable.sorted {df.date(from: $0.date)! > df.date(from: $1.date)!}
+    }
+    //Метод настройки графиков
+    private func  setUpSchedule() {
+        let totalRecoveredFloat = Float(totalRecovered) / Float(totalConfirmed)
+        let totalDeathsFloat = Float(totalDeaths) / Float(totalConfirmed)
+        
+        recoveredProgressView.setProgress(totalRecoveredFloat, animated: true)
+        deathsProgressView.setProgress(totalDeathsFloat, animated: true)
+        totalProgressView.setProgress(1.0, animated: true)
+        
+        totalLabel.text = "Confirmed: \(totalConfirmed)"
+        recoveredLabel.text = "Recovered: \(totalRecovered)"
+        deathsLabel.text = "Deaths: \(totalDeaths)"
     }
 }
 
