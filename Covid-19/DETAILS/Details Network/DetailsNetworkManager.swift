@@ -74,7 +74,8 @@ class DetailsNetworkManager {
                 //Прибавляем модель к массиву моделей
                 daysArray.append(currentInf)
             }
-            return daysArray.sorted{ $0.confirmedNum > $1.confirmedNum }
+            return daysArray
+            //return daysArray.sorted{ $0.confirmedNum > $1.confirmedNum }
         } catch {
             delegate?.didFailWithError(error: error)
             return nil

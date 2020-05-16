@@ -38,7 +38,7 @@ class DetailsViewController: UIViewController {
     
 //MARK: - FUNCTIONS
    
-    
+
     
 }
 
@@ -51,6 +51,8 @@ extension DetailsViewController: DetailsNetworkManagerDelegate {
         //Выполняем в асинхронном режиме чтобы не ждать завершения загрузки перед показом view
         DispatchQueue.main.async {
             self.timeTable = information
+            self.dateSorting()
+            //self.timeTable = self.timeTable.sorted { ($1.date ).localizedCaseInsensitiveCompare($0.date ) == .orderedDescending}
             self.tableView.reloadData()
         }
     }
@@ -58,12 +60,20 @@ extension DetailsViewController: DetailsNetworkManagerDelegate {
     func didFailWithError(error: Error) {
         print(error)
     }
+    
+    //Метод форматирования списка моделей
+    private func dateSorting() {
+        let df = DateFormatter()
+        df.dateFormat = "M/d/yy"
+        timeTable = timeTable.sorted {df.date(from: $0.date)! > df.date(from: $1.date)!}
+    }
 }
 
 
 
 // MARK: - UITABLEVIEWDATASOURSE
 extension DetailsViewController: UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return timeTable.count
     }
