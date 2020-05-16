@@ -9,7 +9,7 @@
 import Foundation
 //Модель данных JSON
 struct CurrentCData: Codable {
-    let timeseries: [String: Timesery]
+    let timeseries: [String: Timesery]    
 }
 
 // MARK: - Timesery

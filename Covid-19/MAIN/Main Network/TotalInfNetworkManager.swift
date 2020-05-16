@@ -10,13 +10,13 @@ import Foundation
 
 //MARK: - DELEGATE
 protocol TotalInfManagerDelegate {
-    func didUpdateInformation(_ totalInfManager: TotalInfManager, information: TotalInfModel)
+    func didUpdateInformation(_ totalInfManager: TotalInfNetworkManager, information: TotalInfModel)
     func didFailWithError(error: Error)
 }
 
 
 //Получаем данные для основной статистики
-class TotalInfManager {
+class TotalInfNetworkManager {
 //MARK: - VARIABLES
     //URL
     private let totalInformationURL = "https://wuhan-coronavirus-api.laeyoung.endpoint.ainize.ai/jhu-edu/brief"
@@ -39,10 +39,10 @@ class TotalInfManager {
                     self.delegate?.didFailWithError(error: error!)
                     return
                 }
-                if let safeData = data {
-                    print(safeData)
+                if let safeData = data {                    
                     if let information = self.parseJSON(safeData) {
-                        print(information)
+                        print("Список информации по миру получен")
+                        //print(information)
                         self.delegate?.didUpdateInformation(self, information: information)
                     }
                 }

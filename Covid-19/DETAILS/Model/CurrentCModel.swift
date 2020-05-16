@@ -8,7 +8,7 @@
 
 import Foundation
 //Модель текущей страны
-struct CurentCModel {
+struct CurrentCModel {
     var date: String
     var confirmedNum: Int
     var deathsNum: Int

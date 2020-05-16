@@ -18,7 +18,7 @@ class MainViewController: UIViewController {
     
     
 //MARK: - OBJECTS
-    var totalInfManager = TotalInfManager()
+    var totalInfManager = TotalInfNetworkManager()
     
     
 //MARK: - VARIABLES    
@@ -101,8 +101,8 @@ class MainViewController: UIViewController {
 //MARK: - EXTENSION. TOTALINFORMATION DELEGATE
 extension MainViewController: TotalInfManagerDelegate {
     //Обновление информации при загрузке данных
-    func didUpdateInformation(_ totalInfManager: TotalInfManager, information: TotalInfModel) {
-        //Выполняем в асинхронном режиме чтобы не ждать завершения загрузкиы перед показом view
+    func didUpdateInformation(_ totalInfManager: TotalInfNetworkManager, information: TotalInfModel) {
+        //Выполняем в асинхронном режиме чтобы не ждать завершения загрузки перед показом view
         DispatchQueue.main.async {
             self.confirmedLabel.text = String(information.confirmedNum)
             self.deathLabel.text = String(information.deathsNum)

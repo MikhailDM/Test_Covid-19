@@ -15,6 +15,9 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var deathLabel: UILabel!
     @IBOutlet weak var recoveredLabel: UILabel!
     
+
+//MARK: - OBJECTS
+    var currentInfManager = DetailsNetworkManager.shared
     
   
 //MARK: - VARIABLES
@@ -24,7 +27,12 @@ class DetailsViewController: UIViewController {
 //MARK: - LOADING
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Назначаем имя страны
         countryNameLabel.text = country.fullName
+        //Назначаем себя делегатом менеджера получения всей информации
+        currentInfManager.delegate = self
+        //Test
+        currentInfManager.fetchAllInf(url: country.url)        
     }
     
     
@@ -33,4 +41,28 @@ class DetailsViewController: UIViewController {
    
     
     
+}
+
+
+
+//MARK: - EXTENSION. TOTALINFORMATION DELEGATE
+extension DetailsViewController: DetailsNetworkManagerDelegate {
+    //Обновление информации при загрузке данных
+    func didUpdateInformation(_ detailsInfManager: DetailsNetworkManager, information: [CurrentCModel]) {
+        print(information.last?.date)
+        print(information.last?.confirmedNum)        
+        print(information.last?.deathsNum)
+        print(information.last?.recoveredNum)
+        
+        //Выполняем в асинхронном режиме чтобы не ждать завершения загрузки перед показом view
+        /*DispatchQueue.main.async {
+            self.confirmedLabel.text = String(information.confirmedNum)
+            self.deathLabel.text = String(information.deathsNum)
+            self.recoveredLabel.text = String(information.recoveredNum)
+        }*/
+    }
+    //Ошибка сети
+    func didFailWithError(error: Error) {
+        print(error)
+    }
 }
